@@ -1,0 +1,19 @@
+.container {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .theAttr{
+    margin: 0!important;
+    font-size: 13px!important;
+    font-weight: 500!important;
+    border-bottom: 1px solid #4873b7;
+    color: #4873B7!important;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+  .theVal{
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 0 12px 10px;
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "defaultConf": {
+    "type": "website",
+    "title": "The page title - google title",
+    "description": "The page description - google desc",
+    "headline": "The head line",
+    "siteName": "The site name",
+    "keywords": [
+      "keyword1",
+      "keyword2",
+      "keyword3",
+      "keyword4",
+      "keyword5",
+    ],
+    "generator": "Powered by React",
+    "copyright": "2017 by someone",
+    "publisher": "Mxn0",
+    "author": "Mxn0",
+    "lang": "vi"
+  },
+  "shopPage": {
+    "title": "Awesome shop - extremely sale-off",
+    "canonical": "shop/"
+  },
+  "categoryPage": {
+    "title": "Products of $categoryName$",
+    "canonical": "category/$categoryId$/$categoryName$"
+  },
+  "checkoutPage": {
+    "title": "Checkout for your TopUp",
+    "canonical": "checkout/topup/phuong-thuc-thanh-toan"
+  }
+}

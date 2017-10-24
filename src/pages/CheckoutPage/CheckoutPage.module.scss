@@ -1,0 +1,36 @@
+@import '../../components/Styles/variables.scss';
+
+.container {
+}
+
+.stepContainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: 768px) {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+
+  // Overwrite Ant white by default, change to grey
+  :global(.ant-steps .ant-steps-head), :global(.ant-steps .ant-steps-title) {
+    background: $base-page-bg;
+  }
+  :global(.ant-steps-status-process .ant-steps-tail > i),
+  :global(.ant-steps-status-wait .ant-steps-tail > i) {
+    background: #ccc !important;
+  }
+  :global(.ant-steps .ant-steps-item.ant-steps-status-finish .ant-steps-head-inner){
+    //background-color: $base-page-bg;
+    //border-color: my-base-color(green);
+  }
+}
+
+.stepContent {
+  clear: both;
+}
+
+.stepAction {
+  text-align: right;
+  padding-bottom: 5px;
+}

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "experimentalDecorators": true,
+
+    /*
+     * Consider es5 module as export default in es6,
+     * Some libs using export =, like React: `export = React; export as namespace React;` in .d.ts, so that you need
+     * to `import * as React from 'react'; --> This is not a good solution because of large amount of file u need to modify.
+     * Someone can struggle with error by using "module": "commonjs", but not this case.
+     *
+     * For more detail:
+     * https://stackoverflow.com/questions/33793875/migrating-react-es6-to-typescript-import-statements-dont-work
+     */
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5", // ts compile to es5 then webpack can minify it to build
+    "jsx": "react",
+    "lib": [ "es2015", "dom" ], // Support es2015, and dom for some dom base library
+    "types" : [], // Specify "types": [] to disable automatic inclusion of @types packages. If turn on, its will ignore typings folder ?
+    "sourceMap": false // false to improve build performance
+  },
+  "include": [
+    "./typings/index.d.ts",
+    "./src/**/*"
+  ]
+}

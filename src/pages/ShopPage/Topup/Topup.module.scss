@@ -1,0 +1,199 @@
+@import '../../../components/Styles/variables';
+
+$topupMaxHeight: 55px;
+$topupMaxHeightMobile: 48px;
+
+.hide{
+  display: none;
+}
+
+.topup {
+  margin-bottom: 10px;
+  max-height: 999px;
+
+  &.collapse {
+    max-height: $topupMaxHeightMobile;
+    overflow: hidden;
+    border-left: 3px solid #248dff;
+    border-radius: 3px 2px 2px 3px;
+
+    @media (min-width: 768px) {
+      max-height: $topupMaxHeight;
+    }
+  }
+
+  .collapseBtn {
+    cursor: pointer;
+  }
+
+  & :global(.ant-card-body), & :global(.ant-card-head) {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  & :global(.ant-card-head) {
+    height: $topupMaxHeightMobile; /*Sync the style with product category header height on right content*/
+    line-height: $topupMaxHeightMobile;
+
+    @media (min-width: 768px) {
+      height: $topupMaxHeight; /*Sync the style with product category header height on right content*/
+      line-height: $topupMaxHeight;
+    }
+  }
+
+  & :global(.ant-form-explain) {
+    font-size: 12px;
+    text-align: right;
+    margin: 6px 0;
+  }
+}
+
+.radioGroup {
+  display: block;
+
+  & > label {
+    @include bs-btn;
+    margin: 2%;
+    width: 29%;
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 0 !important;
+    font-weight: 500;
+    box-shadow: none !important;
+    color: my-base-color(orange);
+
+    &:global(.ant-radio-button-wrapper-disabled) {
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+  & > label:hover {
+    color: my-base-color(info-blue);
+    border-color: my-base-color(info-blue);
+
+    &:before {
+      background-color: my-base-color(info-blue);
+    }
+  }
+  & > label:global(.ant-radio-button-wrapper-checked) {
+    @include bs-btn-info;
+  }
+  & > label:global(.ant-radio-button-wrapper-disabled) {
+    cursor: not-allowed;
+  }
+
+  .cardBadge > sup {
+    background-color: rgba(91, 197, 46, 0.8);
+    top: -19px;
+    left: 34px;
+    font-size: 11px;
+    font-weight: 300;
+    padding: 0 5px;
+
+    @media (min-width: 768px) {
+      left: 29px;
+    }
+  }
+}
+
+.carrierThumbSmall {
+  width: 40px; height: auto;
+  margin: 0;
+}
+
+.radioGroupCarrier {
+  & > label {
+    margin: 2%;
+    width: 29%;
+    height: auto!important;
+
+    /* Avoid flickering bug in chrome when you hover it, fix for filter: brightness(), and some other chrome rendering issue */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+
+    @media (min-width: 768px) {
+      width: 46%;
+    }
+  }
+
+  img {
+    width: 98%; height: auto;
+    margin: 0 auto;
+
+    filter: grayscale(100%);
+  }
+
+  & > label:global(.ant-radio-button-wrapper-checked) {
+    background: white;
+
+    img {
+      filter: grayscale(10%);
+    }
+  }
+}
+
+
+.phoneInputFormItem {
+  :global(.ant-form-item-control) {
+    &:after{
+      top: 10px;
+    }
+
+    :global(.has-error) {
+      .phoneInput {
+        font-weight: 500;
+        height: 36px;
+        font-size: 16px;
+        color: #666;
+
+        &:global(.ant-select-open),
+        &:global(.ant-select-focused) {
+          border-color: #f04134;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+    }
+
+  }
+}
+
+
+.submitBtn {
+  @include bs-btn;
+  @include bs-btn-info;
+  float: right;
+  margin-top: 5px;
+
+  &:hover, &:focus{
+    @include bs-btn-info;
+  }
+}
+
+.helpText {
+  color: #999999;
+  font-size: 12px;
+}
+
+.supportedCarrier b{
+  color: my-base-color(info-blue);
+}
+
+
+.historyErr {
+  margin: 0 0 10px 0;
+  text-align: right;
+  font-size: 12px;
+  color: #f04134;
+  padding: 2px 0 9px 0;
+  border-bottom: 1px solid #ddd;
+}
+.historyTitle {
+  margin: 0;
+  font-size: 13px;
+}
+.historyCard {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+}

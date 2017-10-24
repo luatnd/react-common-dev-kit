@@ -1,0 +1,74 @@
+/* This Style folder is project scope, all project's common style was defined here, like font-size, ... */
+
+@import "variables";
+
+// Demonstrate bootstrap container
+.mainContainer{
+  margin-top: 72px;
+}
+
+.antBsContainer {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.backTop{
+  right: 18px;
+  bottom: 10px;
+
+  @media (min-width: 768px) {
+    right:70px;
+  }
+
+  &:global(.ant-back-top-content) { }
+}
+
+.basePadding12 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.help-block{
+   /* //Moved to mixins in variables.scss */
+}
+.text-right{
+   /* //Moved to mixins in variables.scss */
+}
+
+@mixin notification {
+  background: rgba(255, 255, 255, 0.95)!important;
+  border-right: 4px solid;
+
+  @media (min-width: 768px) {
+
+  }
+}
+.successNotification{
+  @include notification;
+  border-color: #00a854;
+}
+.infoNotification{
+  @include notification;
+  border-color: #ffbf00;
+}
+.warningNotification{
+  @include notification;
+  border-color: #108ee9;
+}
+.errorNotification{
+  @include notification;
+  border-color: #f04134;
+}

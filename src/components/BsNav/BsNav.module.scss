@@ -1,0 +1,46 @@
+.navContainer{
+  z-index: 999; // Smaller than notification z-index
+  background: rgba(0, 0, 0, 0) linear-gradient(to right, rgba(30,87,153, 0.96) 0%, rgba(76,162,255, 0.96) 0%, #007aff 100%) repeat scroll 0 0;
+}
+
+.navbarContent{
+  height: 0;
+  transition: all 0.2s;
+
+  & :global(ul.navbar-nav li:last-child a) {
+    @media (min-width: 768px) {
+      text-align: right;
+      margin-right: -16px;
+    }
+  }
+}
+
+.navbarContent:global(.in) {
+  height: 180px;
+}
+
+.btnMenuToggle{
+  color: white;
+  border-color: white;
+  background: transparent;
+
+  &:hover, &:focus{
+    background: #4CA2FF!important;
+  }
+
+  & :global(.icon-bar){
+    background-color: white!important;
+  }
+}
+
+:global #mainmenu li a{color:#ffffff;}
+
+:global #mainmenu li.active a,
+:global #mainmenu li a.active{
+  position:relative;
+  background-color: rgba(255,255,255,0.15);
+
+  @media (min-width: 768px) {
+    border-bottom: 2px solid orange;
+  }
+}

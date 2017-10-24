@@ -1,0 +1,1 @@
+Is for JEST polyfill

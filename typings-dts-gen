@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Please see the README.md or README_DEV_KIT_SETUP.md:436 for the detail
+
+pkg=$1
+dts-gen -m $pkg
+mv $pkg.d.ts ./typings/dts-gen
+
+# ---------- If is ES6 module ----------
+# Prepend content to file
+echo "declare module '$pkg' {" > /tmp/newfile
+cat ./typings/dts-gen/$pkg.d.ts >> /tmp/newfile
+cp /tmp/newfile ./typings/dts-gen/$pkg.d.ts
+
+# Append content to file
+echo "}" >> ./typings/dts-gen/$pkg.d.ts
+# ---------- End ES6 module ----------
+
+# Append content in a new line
+cat <<EOT >> ./typings/index.d.ts
+/// <reference path="dts-gen/$pkg.d.ts" />
+EOT
+
+echo Finished!

@@ -1,0 +1,85 @@
+$base-space: 10px;
+$base-line-height: 1.38;
+$base-page-bg: #efefef;
+
+/** ---
+* Define base color for this project
+* NOTE: The key of mao need to be qoute to avoid duplicate with sass build in function/keyword
+*/
+$my-base-colors: (
+  "red": #ed5329,
+  "light-blue": #7bb4ff,
+  "info-blue": #46b8da,
+  "blue": #0f8aff,
+  "blue-nav": #1c88ff,
+  "pink": #DE69DB,
+  "orange": #ff9f17,
+  "green": #5cb85c,
+  "green-b": #4cae4c,
+  "white": #fff,
+  "normal-text": #fff,
+  "dark-white": #aaa,
+  "gray-text": #aaa,
+);
+
+@function my-base-color($color) {
+  $color: quote($color);
+
+  @if map-has-key($my-base-colors, $color) {
+    @return map-get($my-base-colors, $color);
+  }
+
+  @error "The key #{$color} is not in the map ’$my-base-color’";
+  @return null;
+}
+
+
+/* Usage example:
+@import './variables.scss';
+.my-base__red_example { color: map-get($my-base-color-map, "red") }
+.my-base__red_example2 {
+  color: my-base-color(red);
+  background: my-base-color("pink");
+}
+*/
+// --- End base color
+
+
+
+@mixin bs-btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+@mixin bs-btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+@mixin bs-btn {
+  display: inline-block;
+  //padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+@mixin help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
+@mixin text-right {
+  text-align: right;
+}

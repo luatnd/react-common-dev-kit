@@ -1,0 +1,151 @@
+.product {
+  margin-bottom: 10px;
+  height: 125px;
+
+  &:hover {
+    box-shadow: 0 0px 5px #ddd !important;
+  }
+
+  @media (min-width: 768px) {
+    height: 240px;
+  }
+
+  & > :global(.ant-card-body) {
+    padding: 0;
+
+    @media (min-width: 768px) {
+      padding: 12px;
+    }
+  }
+
+  .pright{
+    padding-left: 15px;
+
+    @media (min-width: 768px) {
+      padding-left: 0;
+    }
+  }
+
+  & .imgC {
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 230px;
+    display: flex;
+    justify-content: center;  /* align horizontal */
+    align-items: center; /* align vertical */
+    cursor: pointer;
+
+    //img { width: auto;height: 75%;}
+    img { height: 100px; object-position: center; object-fit: contain}
+/*
+    &.horizontal {
+      height: 140px;
+    }
+    &.vertical {
+      height: 230px;
+    }
+
+    @media (min-width: 768px) {
+      &.horizontal{
+        height: 100px;
+        img { width: 100%;height: auto;}
+      }
+      &.vertical{
+        height: 230px;
+        img { width:auto; height: 100%; }
+      }
+    }*/
+    @media (max-width: 767px) {
+      margin-top: 12px;
+    }
+  }
+
+  $font-size: 13px;
+  $line-height: 1.385;
+  $lines-to-show: 3;
+  & .title {
+    text-transform: capitalize;
+    position: relative;
+    text-align: left;
+    margin-top: 15px;
+    letter-spacing: .1px;
+    width: 100%;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    color: #242424;
+
+    /* Make take ellipsis on multiple line: Firefox and IE was not supported */
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 400px;
+    /* Fallback for non-webkit */
+    max-height: $font-size*$line-height*$lines-to-show;
+    height: auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+
+    & > a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  & .priceSale {
+    font-size: 13px;
+    color: #242424;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+
+    & .priceReg {
+      font-size: 11px;
+      color: #a2a2a2;
+      text-decoration: line-through;
+      text-align: left;
+      font-weight: 300;
+    }
+
+    & .saleTag {
+      color: #FF3B26;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 10px 0 0;
+    }
+  }
+
+  & .reviewWrap{
+    & .rate {
+      padding: 0;
+      font-size: 12px;
+      display: inline-block;
+
+      & > li {
+        margin-right: 3px;
+      }
+    }
+
+    & .review{
+      margin-left: 5px;
+      padding-top: 8px;
+      font-size: 12px;
+      color: #787878;
+      display: inline-block;
+      text-transform: none;
+    }
+  }
+}

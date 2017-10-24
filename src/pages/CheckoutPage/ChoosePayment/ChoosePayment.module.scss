@@ -1,0 +1,150 @@
+@import '../../../components/Styles/variables';
+
+.container {
+}
+
+.bankContainer {
+
+  :global(.bank) {
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+  }
+
+  :global(.bank > li) {
+    float: left;
+    border: 1px dashed #ccc;
+    margin: 3px;
+    height: 60px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  :global(.bank > li.active) {
+    border: 2px solid red;
+    position: relative;
+  }
+
+  :global(.bank > li a) {
+    display: block;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    width: 95px;
+  }
+
+  :global(.bank > li.active a) {
+    height: 56px;
+    width: 89px;
+  }
+
+  :global(.bank > li a img) {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+  }
+
+  .title,
+  .title :global(.ant-form-item-label) > label{
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    color: rgb(16, 142, 233);
+    border-bottom: 1px dashed #999;
+  }
+
+  .title2{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e89702;
+  }
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & > :global(.ant-radio-button-wrapper) {
+    @include bs-btn;
+
+    margin: 20px 12px 3px 3px;
+    padding: 0;
+    width: 100px; height: 60px;
+    border: 1px solid #dddddd;
+    border-radius: 3px !important;
+    box-shadow: none !important;
+
+    font-weight: 500;
+    color: my-base-color(orange);
+    line-height: 50px;
+    filter: brightness(99%);
+    /* Avoid flickering bug in chrome when you hover it, fix for filter: brightness(), and some other chrome rendering issue */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+
+    @media (max-width: 400px) {
+      width: 85px;
+    }
+
+    // Optimize for mobile to fix performance issue. WTF!!
+    @media (max-width: 768px) {
+      //transition: none;
+      border: 1px solid #eee;
+    }
+  }
+  & > :global(.ant-radio-button-wrapper:not(:first-child)::before){
+    background-color:transparent;
+  }
+  & > :global(.ant-radio-button-wrapper):hover {
+    color: my-base-color(info-blue);
+    border-color: my-base-color(info-blue);
+
+    &:before {
+      background-color: transparent;
+    }
+  }
+  & > :global(.ant-radio-button-wrapper):global(.ant-radio-button-wrapper-checked) {
+    @include bs-btn-info;
+    border-width: 3px;
+    //border-color: my-base-color(blue-nav);
+    //box-shadow: 0px 2px 12px 0 my-base-color(blue-nav)!important;
+    border-color: #FF5722;
+    filter: brightness(100%);
+  }
+
+  & span:last-child {
+    display: inline-block;
+    width: 100%; height: 100%;
+    white-space: normal; // Allow break word
+    line-height: $base-line-height;
+    overflow: hidden;
+  }
+  & span:last-child img {
+    width: 100%; height: 100%;
+  }
+}
+
+
+.submitNote{
+  @include help-block;
+  @include text-right;
+}
+
+.formItem {
+  :global(.ant-form-explain) {
+    margin-top: 6px;
+  }
+
+  .iconInput{
+    height: 36px;
+  }
+}

@@ -1,0 +1,47 @@
+@import '../components/Styles/variables';
+
+// Overwrite Ant design for mobile responsive UI
+.layoutContainer {
+
+  /**
+  * Responsive
+  * Ant was not design for mobile, so that you need to overwrite some default css value to make effective UI on mobile
+  */
+  & :global(.ant-card-body) {
+    // Overwrite for mobile
+    padding: 12px;
+
+    // Old Default css
+    @media (min-width: 768px) {
+      padding: 24px;
+    }
+  }
+  & :global(.ant-card-head) {
+    // Overwrite for mobile
+    padding: 0 12px;
+
+    // Old Default css
+    @media (min-width: 768px) {
+      padding: 0 24px;
+    }
+  }
+
+  .hiddenSection {
+    position: absolute;
+    bottom: 0; left: 0;
+    z-index: -9999;
+    width: 0; height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+:global(.ant-notification-topRight) {
+  top: 69px!important;
+
+  // For mobile 360px
+  @media (max-width: 360px) {
+    width: 306px!important;
+    margin-right: 6px!important;
+  }
+}

@@ -1,0 +1,18 @@
+export interface ProductType {
+  id:string,
+  supplier_id:string,
+  category_id:string,
+  cat_name:string,
+  title:string,
+  description:string,
+  photo:string,
+  keywords:string,
+  date_exp:string,
+  total:string,
+  is_price:string,
+  due_date:string,
+  limited_period:string,
+  limited_quantity:string,
+  information:string,
+  is_active:string,
+}

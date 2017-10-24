@@ -1,0 +1,19 @@
+@import '../../../components/Styles/variables';
+
+.container {
+}
+
+.fullWidth430 {
+  @media (max-width: 430px) {
+    width: 100%;
+  }
+}
+
+.circleContainer {
+  text-align: right;
+
+  @media (max-width: 430px) {
+    margin-top: 30px;
+    text-align: center;
+  }
+}

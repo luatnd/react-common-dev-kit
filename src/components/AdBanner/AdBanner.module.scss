@@ -1,0 +1,16 @@
+.adBannerC{
+  padding: 0;
+  margin-bottom: 10px;
+
+  &:hover{
+    box-shadow: none;
+  }
+
+  & > :global(.ant-card-body){
+    padding: 0;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
