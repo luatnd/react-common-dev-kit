@@ -8,8 +8,24 @@ Original `Create React App` README: [README_CRA.md](README_CRA.md)
 
 ## Table of Contents
 
-[TOC]
+<details>
 
+- [Introduction](#introduction)
+- [Table of Contents](#table-of-contents)
+- [Install](#install)
+    - [NOTE: React UI run along side with old PHP UI](#note-react-ui-run-along-side-with-old-php-ui)
+- [Deploy](#deploy)
+    - [1. Build production release](#1-build-production-release)
+    - [2. Do some foo bar thing](#2-do-some-foo-bar-thing)
+- [Develop](#develop)
+    - [1. Folder structure](#1-folder-structure)
+    - [2. New screen with route](#2-new-screen-with-route)
+    - [3. State mng with Redux](#3-state-mng-with-redux)
+    - [4. Async with redux-saga](#4-async-with-redux-saga)
+    - [5. New component code style](#5-new-component-code-style)
+- [Development kit setting up](#development-kit-setting-up)
+
+</details>
 
 ## Install
 ```

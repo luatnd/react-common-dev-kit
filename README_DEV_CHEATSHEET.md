@@ -3,9 +3,46 @@ Development cheatsheet
 Use for quick reference
 
 
-# Table of content
+Table of contents
+=================
 
-[TOC]
+<details>
+
+- [Development cheatsheet](#development-cheatsheet)
+- [Table of content](#table-of-content)
+- [Daily common task](#daily-common-task)
+    - [Create new screen / new page](#create-new-screen--new-page)
+      - [Create new route](#create-new-route)
+      - [Create new state management (Redux reducer)](#create-new-state-management-redux-reducer)
+    - [Router](#router)
+      - [Navigate to new route](#navigate-to-new-route)
+      - [Go back or forward](#go-back-or-forward)
+      - [Get parameters from URL](#get-parameters-from-url)
+    - [API interact with Redux saga](#api-interact-with-redux-saga)
+      - [How to cache your API result](#how-to-cache-your-api-result)
+- [Advance section](#advance-section)
+    - [ES6 nested destructuring assignment](#es6-nested-destructuring-assignment)
+    - [Create your own polyfil](#create-your-own-polyfil)
+    - [Create your own node_modules](#create-your-own-node_modules)
+    - [Redux dev tool advance](#redux-dev-tool-advance)
+    - [Analyze the build](#analyze-the-build)
+- [ES6 cheatsheet](#es6-cheatsheet)
+    - [Const obj is mutable (This is apply for almost language)](#const-obj-is-mutable-this-is-apply-for-almost-language)
+    - [Array](#array)
+    - [Object](#object)
+    - [Seq:](#seq)
+    - [Sorted List](#sorted-list)
+    - [xxx](#xxx)
+- [Debugging](#debugging)
+    - [`debugger` keyword](#debugger-keyword)
+    - [Reactotron](#reactotron)
+    - [Styling Console out put](#styling-console-out-put)
+    - [How to modify SEO info for page:](#how-to-modify-seo-info-for-page)
+- [Typescript](#typescript)
+    - [import lodash, moment into typescript](#import-lodash-moment-into-typescript)
+- [TDD with React JS how to](#tdd-with-react-js-how-to)
+
+</details>
 
 
 # Daily common task

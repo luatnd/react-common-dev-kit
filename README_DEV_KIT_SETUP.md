@@ -5,9 +5,36 @@ Development Cheatsheet for this project. See the [README_DEV_CHEATSHEET.md](READ
 
 
 
-Table of content:
+Table of contents
+=================
+<details> 
 
-[TOC]
+  - [Development kit setting up](#development-kit-setting-up)
+    - [**About the dev kit:**](#about-the-dev-kit)
+    - [Redux](#redux)
+    - [Typescript config](#typescript-config)
+    - [Assets loader](#assets-loader)
+    - [Add Ant-design](#add-ant-design)
+    - [Add CSS module](#add-css-module)
+    - [Router](#router)
+      - [use connected-react-router](#use-connected-react-router)
+      - [react-router](#react-router)
+      - [react-router-redux](#react-router-redux)
+    - [Async with redux-saga](#async-with-redux-saga)
+    - [Typescript definition](#typescript-definition)
+      - [Use typings](#use-typings)
+      - [Create your own definition](#create-your-own-definition)
+    - [Unit test with JEST, Enzyme](#unit-test-with-jest-enzyme)
+      - [JEST and Babel support issues:](#jest-and-babel-support-issues)
+- [Optimize](#optimize)
+    - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
+- [Webpack](#webpack)
+      - [Loader will execute in order, from bottom to top](#loader-will-execute-in-order-from-bottom-to-top)
+      - [style-loader vs css-loader](#style-loader-vs-css-loader)
+    - [Webpack config: Allow spliting code into multiple bundle](#webpack-config-allow-spliting-code-into-multiple-bundle)
+    - [Heroku deployment for Create React App](#heroku-deployment-for-create-react-app)
+
+</details>
 
 
 ### **About the dev kit:**
