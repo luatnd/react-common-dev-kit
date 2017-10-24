@@ -1,6 +1,4 @@
 ## Introduction
-Campus web frontend using React
-Initial for /shop on campus.
 
 Development cheatsheet for this project: [README_DEV_CHEATSHEET.md](README_DEV_CHEATSHEET.md)
 How to setup this dev kit: [README_DEV_KIT_SETUP.md](README_DEV_KIT_SETUP.md)
@@ -30,19 +28,10 @@ Original `Create React App` README: [README_CRA.md](README_CRA.md)
 ## Install
 ```
 git clone URL
-cd campus-front-react
+cd the_cloned_folder
 yarn install
 yarn start
 ```
-
-#### NOTE: React UI run along side with old PHP UI
-* Home page --> Serve by PHP server rendering
-* Shop page --> Serve by React frontend
-
-So the strategy is config the web server to serve:
-1. `/` --> PHP source
-2. `/shop` --> The built React static web
-3. Any other URLs --> Find a best way to configure one-time
 
 ## Deploy
 

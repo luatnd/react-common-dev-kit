@@ -205,7 +205,7 @@ yarn add --dev typescript awesome-typescript-loader source-map-loader
 
 
 If you get any error:
->Module not found: Can't resolve './NotificationRedux' in '/Data/Workspace/source/campus-front-react/src/components/Notification'
+>Module not found: Can't resolve './NotificationRedux' in '/Data/Workspace/source/the_cloned_folder/src/components/Notification'
 The cause might be: You've forgot to register extension to resolve section
 
 
